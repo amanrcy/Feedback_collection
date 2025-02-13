@@ -15,14 +15,8 @@ Ensure you have the following installed on your system:
 - **Node.js** (v18 or later)
 - **MySQL** (Set up locally or use a cloud database)
 - **npm** (Installed with Node.js)
-- **Git** (Optional but recommended)
+  
 
-### Clone the Repository
-
-```sh
-git clone <repository-url>
-cd feedback-app
-```
 
 ### Backend Setup
 
@@ -117,7 +111,5 @@ npm test
 
 ## 5. Conclusion
 
-This Feedback App is a secure and scalable application built with React, Node.js, and MySQL. It includes JWT authentication, input validation, and automated testing. 🚀
-
-For any improvements, feel free to contribute!
+This Feedback App is a secure and scalable application built with React, Node.js, and MySQL. It includes JWT authentication, input validation, and automated testing.
 
