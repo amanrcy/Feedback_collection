@@ -51,6 +51,14 @@ npm start
 
 Now, open http://localhost:3000 in your browser.
 
+4️⃣ Install Concurrently :
+
+npm install concurrently --save-dev
+
+Start Backend & Frontend Together 
+npm start
+
+
 
 ---
 
