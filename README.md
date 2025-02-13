@@ -1,115 +1,112 @@
-# Feedback App Documentation
 
-## Overview
 
-The Feedback App is a web-based application that allows users to submit feedback. It includes a **ReactJS frontend** and a **Node.js backend** with a **MySQL database**. The application follows security best practices and includes **manual and automated testing**.
+Feedback App:
+
+A secure and scalable web-based application for collecting user feedback. Built with ReactJS (frontend), Node.js (backend), and MySQL (database), it ensures authentication, data security, and automated testing.
+
 
 ---
 
-## 1. Installation and Setup
+🚀 Features
 
-### Prerequisites
-
-Ensure you have the following installed on your system:
-
-- **Node.js** (v18 or later)
-- **MySQL** (Set up locally or use a cloud database)
-- **npm** (Installed with Node.js)
-  
+✅ User Authentication (JWT-based)
+✅ Role-based Access Control
+✅ Secure API Endpoints
+✅ Feedback Management (Submit, View, Update, Delete)
+✅ Automated & Manual Testing
 
 
-### Backend Setup
+---
 
-```sh
-cd backend
+📂 Installation & Setup
+
+1️⃣ Clone the Repository:
+
+git clone https://github.com/amanrcy/Feedback_collection.git
+cd Feedback_collection
+
+2️⃣ Backend Setup:
+
+cd backend  
 npm install
-```
 
-#### Configure Environment Variables
+🔹 Create a .env file inside the backend/ folder and add:
 
-Create a `.env` file inside the `backend` folder:
-
-```
 PORT=3000
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=password
 DB_NAME=feedback_db
 JWT_SECRET=your_secret_key
-```
 
-#### Start Backend
+Run the backend server:
 
-```sh
 npm start
-```
 
-### Frontend Setup
+3️⃣ Frontend Setup:
 
-```sh
-cd ../frontend
-npm install
+cd ../frontend  
+npm install  
 npm start
-```
 
-The React app will be available at **[http://localhost:3000](http://localhost:3000)**.
+Now, open http://localhost:3000 in your browser.
 
----
-
-## 2. API Endpoints
-
-### Authentication
-
-| Method | Endpoint             | Description                       |
-| ------ | -------------------- | --------------------------------- |
-| POST   | `/api/auth/register` | Register a new user               |
-| POST   | `/api/auth/login`    | Authenticate user & get JWT token |
-
-### Feedback Management
-
-| Method | Endpoint             | Description                                       |
-| ------ | -------------------- | ------------------------------------------------- |
-| POST   | `/api/feedbacks`     | Submit feedback (Authenticated users only)        |
-| GET    | `/api/feedbacks`     | Retrieve all feedbacks (Authenticated users only) |
-| PUT    | `/api/feedbacks/:id` | Update feedback by ID (Authenticated users only)  |
-| DELETE | `/api/feedbacks/:id` | Delete feedback by ID (Authenticated users only)  |
 
 ---
 
-## 3. Security Measures
+🛠 API Endpoints
 
-- **JWT Authentication**: Secures API endpoints.
-- **Password Hashing**: Uses `bcrypt` to store hashed passwords.
-- **Input Validation**: Protects against SQL injection and XSS.
-- **CORS Policy**: Restricts API access.
-- **Secure HTTP Headers**: Added using `helmet`.
-- **Role-based Access Control**: Only authenticated users can modify feedback.
+🛡️ Authentication
+
+📝 Feedback Management
+
 
 ---
 
-## 4. Testing
+🔒 Security Measures:
 
-### Manual Testing
+JWT Authentication – Secures API endpoints.
 
-| Test Case                               | Expected Outcome                   |
-| --------------------------------------- | ---------------------------------- |
-| Submit valid feedback                   | Feedback is stored in the database |
-| Submit feedback with empty fields       | Error message displayed            |
-| Unauthorized access to `/api/feedbacks` | Request is denied                  |
-| Update feedback with valid JWT          | Feedback updated successfully      |
+Password Hashing – Uses bcrypt for secure password storage.
 
-### Automated Testing
+Input Validation – Prevents SQL Injection & XSS attacks.
 
-Run backend tests using Jest and Supertest:
+CORS Policy – Restricts unauthorized API access.
 
-```sh
-cd backend
+Secure HTTP Headers – Implemented using helmet.
+
+
+
+---
+
+🧪 Testing:
+
+Manual Testing
+
+Automated Testing
+
+Run backend tests using Jest & Supertest:
+
+cd backend  
 npm test
-```
+
 
 ---
 
-## 5. Conclusion
+🛠 Technologies Used
 
-This Feedback App is a secure and scalable application built with React, Node.js, and MySQL. It includes JWT authentication, input validation, and automated testing.
+Frontend: ReactJS, Redux, Bootstrap
+
+Backend: Node.js, Express.js
+
+Database: MySQL
+
+Authentication: JWT
+
+Security: bcrypt, helmet, CORS
+
+
+Conclusion:
+
+This Feedback App provides a secure and efficient way to collect, manage, and analyze feedback. With authentication, security measures, and automated testing, it ensures a reliable user experience.
 
